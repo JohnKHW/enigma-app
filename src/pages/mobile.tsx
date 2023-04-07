@@ -9,7 +9,7 @@ import { Wallet } from "@/components/wallet";
 import { CouponsList } from "@/components/coupons-list";
 
 const theme = createTheme();
-export default function Album() {
+const MoiblePage = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -37,4 +37,5 @@ export default function Album() {
       {/* End footer */}
     </ThemeProvider>
   );
-}
+};
+export default MoiblePage;
