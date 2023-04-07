@@ -7,9 +7,18 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import HistoryIcon from "@mui/icons-material/History";
 import HomeIcon from "@mui/icons-material/Home";
 import SettingsIcon from "@mui/icons-material/Settings";
+interface IProps {
+  pageIdx: number;
+  setPageIdx: (idx: number) => void;
+}
 
-export const Footer = () => {
-  const [value, setValue] = React.useState(0);
+export const Footer = (props: IProps) => {
+  const { pageIdx, setPageIdx } = props;
+  const [value, setValue] = React.useState(pageIdx);
+
+  React.useEffect(() => {
+    setPageIdx(value);
+  }, [setPageIdx, value]);
 
   return (
     <Box

@@ -7,9 +7,11 @@ import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { Wallet } from "@/components/wallet";
 import { CouponsList } from "@/components/coupons-list";
+import ShopList from "@/components/shop-list";
 
 const theme = createTheme();
-const MoiblePage = () => {
+const MobilePage = () => {
+  const [pageIdx, setPageIdx] = React.useState(0);
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -30,12 +32,13 @@ const MoiblePage = () => {
             <Wallet />
           </Container>
         </Box>
-        <CouponsList />
+        { pageIdx === 0 && <CouponsList /> }
+        { pageIdx === 2 && <ShopList /> }
       </main>
       {/* Footer */}
-      <Footer />
+      <Footer setPageIdx={setPageIdx} pageIdx={pageIdx} />
       {/* End footer */}
     </ThemeProvider>
   );
 };
-export default MoiblePage;
+export default MobilePage;
