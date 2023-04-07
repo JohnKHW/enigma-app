@@ -31,7 +31,7 @@ export const Footer = () => {
           setValue(newValue);
         }}
       >
-        <BottomNavigationAction label="HomeIcon" icon={<HomeIcon />} />
+        <BottomNavigationAction label="Home" icon={<HomeIcon />} />
         <BottomNavigationAction label="History" icon={<HistoryIcon />} />
         <BottomNavigationAction label="Nearby" icon={<LocationOnIcon />} />
         <BottomNavigationAction label="Setting" icon={<SettingsIcon />} />
